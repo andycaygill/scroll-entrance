@@ -1,0 +1,453 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 22px/34px 'Roboto Condensed', Helvetica, Helvetica Neue, Arial;
+    color: #313131;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: normal;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-highlight{
+    color: #216861;
+}
+
+
+.text-small{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/*
+    Reusable Components
+*/
+
+
+.btn{
+    background-color: #5bc2c9;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+
+    .btn:hover{
+        background-color: #148991;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+        .btn{
+            font-size: 2rem;
+            padding: 25px;
+        }
+    }
+
+
+.dark-panel{
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0b322e;
+    background-image: 
+        radial-gradient(ellipse at center,  rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 100%),
+        url(../img/cube-pattern.png);
+    background-attachment: scroll, fixed;
+}
+
+
+
+/*
+    Page Sections
+*/
+
+
+.header{}
+
+    .header__title{
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+        font-variant: small-caps;
+        text-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+    }
+        .header__title span{
+            font-variant: normal;
+            color:#5bc2c9;
+        } 
+
+    .header__caption{
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 0 0 50px 0;
+    }
+
+
+    @media only screen and (min-width: 768px) {
+
+        .header{
+            padding: 150px 50px;
+        }
+
+            .header__title{
+                font-size: 6rem;
+            }
+
+            .header__caption{
+                font-size: 1.6rem;
+            }
+
+    }
+
+
+
+
+.about{
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #5bc2c9;
+    font-weight: 300;
+}
+
+    .about__title{
+        font-size: 2rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        margin: 60px 0 40px;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+        .about{
+            padding: 30px 50px;
+            font-size: 1.8rem;
+        }
+
+            .about__title{
+                font-size: 4rem;
+                text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            }
+
+            .about__caption{
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+    }
+
+
+.documentation{
+    padding: 100px 20px;
+}
+
+    .documentation__caption{
+        font-size: 2rem;
+        margin: 0 0 40px 0;
+    }
+
+
+
+.footer{
+    background-color: #313131;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    .footer a{
+        color: #5bc2c9;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+        .footer a:hover{
+            color: #fff; 
+        }
+
+    @media only screen and (min-width: 768px) {
+        .footer{
+            font-size: 1.3rem;
+        }
+    }
+
+
+
+.example{
+    overflow: hidden;
+    background-color: #d1d1d1;
+    padding: 40px 20px;
+}
+
+    .example__wrap{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .example__code{
+        background-color: rgba(0,0,0,0.1);
+        text-align: left;
+        padding: 20px;
+        border: 0;
+        width: 100%;
+        height: 160px;
+        overflow:auto;
+        outline:none;
+        resize:none;
+    }
+
+        .example__code--inline{
+            display: inline-block;
+            max-width: 390px;
+        }
+
+
+    .example--light{
+        background-color: #e7e7e7;
+    }
+    .example--dark{
+        background-color: #b9b9b9;
+    }
+
+
+@media only screen and (min-width: 768px) {
+
+    .example{
+        padding: 50px;
+    }
+
+    .example-group{
+        display: flex;
+    }
+
+        .example-group .example{
+            width: 50%;
+        }
+
+}
+
+
+/* Custom Animation Example */
+
+[data-entrance="my-custom-animation"]{
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

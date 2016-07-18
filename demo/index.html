@@ -1,0 +1,234 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>ScrollEntrance.js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+        <script src="https://use.fontawesome.com/5706d78fa3.js"></script>
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header dark-panel">
+            
+            <h1 class="header__title">
+                ScrollEntrance<span>.js</span>
+            </h1>
+
+            <p class="header__caption">
+                A simple, lightweight JavaScript plugin for subtle scrolling animations  
+            </p>
+
+            <a class="btn" href="" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
+            </a>
+
+            <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+        </div>
+
+        <div class="about">
+
+            <h1 class="about__title">
+                What does it do?
+            </h1>
+
+            <p class="about__caption">
+                ScrollEntrance.js is a simple way to animate elements as they appear in the viewport. 
+            </p>
+
+            <p class="text-uppercase">
+                See Examples <br/>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </p>
+
+        </div>
+
+
+        <div class="example example--light">
+            
+            <div data-entrance="fade" class="example__wrap text-center">
+
+                <h2 class="example__title">
+                    Fade In
+                </h2>
+
+                <p>
+                    Add <span class="text-highlight">data-entrance="fade-in"</span> to fade the element in
+                </p>
+
+<textarea class="example__code example__code--inline" disabled="true"><div data-entrance="fade">
+    ...
+</div></textarea>
+
+            </div>
+
+
+        </div>
+
+        <div class="example-group">
+
+                <div class="example">
+
+                    <div data-entrance="from-left" class="example__wrap">
+
+                        <h2 class="example__title">
+                            Animate From the Left...
+                        </h2>
+
+                        <p>
+                            Add <span class="text-highlight">data-entrance="from-left"</span> to animate the element in from the left
+                        </p>
+
+<textarea class="example__code" disabled="true"><div data-entrance="from-left">
+    ...
+</div></textarea>
+
+                    </div>
+
+
+                </div>
+
+                <div class="example example--dark">
+                    
+                    <div data-entrance="from-right" class="example__wrap">
+
+                        <h2 class="example__title">
+                            Animate From the Right...
+                        </h2>
+
+                        <p>
+                            Add <span class="text-highlight">data-entrance="from-right"</span> to animate the element in from the right
+                        </p>
+
+<textarea class="example__code" disabled="true"><div data-entrance="from-right">
+    ...
+</div></textarea>
+
+                    </div>
+
+
+                </div>
+
+        </div>
+
+
+
+        <div class="example-group">
+
+                <div class="example example--dark">
+                    
+                    <div data-entrance="from-top" class="example__wrap">
+
+                        <h2 class="example__title">
+                            Animate From the Top...
+                        </h2>
+
+                        <p>
+                            Add <span class="text-highlight">data-entrance="from-top"</span> to animate the element in from the top
+                        </p>
+
+<textarea class="example__code" disabled="true"><div data-entrance="from-top">
+    ...
+</div></textarea>
+
+                    </div>
+
+
+                </div>
+
+                <div class="example example--light">
+                    
+                    <div data-entrance="from-bottom" class="example__wrap">
+
+                        <h2 class="example__title">
+                            Animate From the Bottom...
+                        </h2>
+
+                        <p>
+                            Add <span class="text-highlight">data-entrance="from-bottom"</span> to animate the element in from the bottom
+                        </p>
+
+<textarea class="example__code" disabled="true"><div data-entrance="from-bottom">
+    ...
+</div></textarea>
+
+                    </div>
+
+
+                </div>
+
+        </div>
+
+        <div class="example">
+            
+            <div data-entrance="my-custom-animation" class="example__wrap text-center">
+
+                <h2 class="example__title">
+                    Custom Animations...
+                </h2>
+
+                <p>
+                    Add <span class="text-highlight">data-entrance="my-custom-animation"</span>, and define some custom css styles to animate the element
+                </p>
+
+<textarea class="example__code example__code--inline text-small" disabled="true"><div data-entrance="my-custom-animation">
+    ...
+</div></textarea>
+<textarea class="example__code example__code--inline text-small" disabled="true">[data-entrance="my-custom-animation"]{
+    transform: rotate(180deg);
+    opacity: 0;
+}
+[data-entrance="my-custom-animation"].has-entered{
+    transform: rotate(0deg);
+    opacity: 1;
+}</textarea>
+
+            </div>
+
+
+        </div>
+
+        <div class="documentation dark-panel">
+
+            <p class="documentation__caption">View the Documentation on GitHub for more Examples and Getting Started</p>
+
+             <a class="btn" href="" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i> View Documentation
+            </a>
+
+        </div>
+
+        <footer class="footer">
+            Made By <a href="http://andrewcaygill.co.uk">Andrew Caygill</a>
+        </footer>
+
+        <script src="js/scroll-entrance.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
