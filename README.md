@@ -2,6 +2,7 @@
 
 Scroll Entrance is a lightweight JavaScript plugin to animate elements as the are scrolled into view, no jQuery required.
 
+[A demo of the plugin is available here](https://andycaygill.github.io/scroll-entrance/)
 
 ## Basic Usage:
 
@@ -19,6 +20,8 @@ This is required to make sure the elements are hidden while the JavaScript is lo
       [data-entrance] { visibility: hidden; }
 </style>
 ```
+
+![]
 
 Note: It is recommended you use detect for JavaScript using Modernizr and add the .js css, this will ensure the elements aren't hidden if JavaScript is disabled. 
 
