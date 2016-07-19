@@ -264,6 +264,7 @@ h1,h2,h3,h4,h5{
 
     .example__code{
         background-color: rgba(0,0,0,0.1);
+        color: #333;
         text-align: left;
         padding: 20px;
         border: 0;
