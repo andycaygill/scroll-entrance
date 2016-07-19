@@ -31,8 +31,8 @@
         document.body.style.overflowX = "hidden";
 
 
-        let anim = elem.getAttribute("data-entrance");
-        let delay = elem.getAttribute("data-entrance-delay");
+        var anim = elem.getAttribute("data-entrance");
+        var delay = elem.getAttribute("data-entrance-delay");
 
         elem.style.transition = "all " + (entrance.duration / 1000) + "s ease";
 
@@ -87,7 +87,7 @@
 
           if ( entrance.isElemInView(item) ){
 
-            let hasEntered = item.classList.contains("has-entered");
+            var hasEntered = item.classList.contains("has-entered");
 
             if (!hasEntered){
               entrance.enter(item);
@@ -100,7 +100,7 @@
       }
 
       entrance.init = function(){
-        
+
         //Store the elements to be animated
         entrance.elements = document.querySelectorAll('[data-entrance]');
 
