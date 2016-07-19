@@ -83,7 +83,9 @@
 
       entrance.viewportChange = function(){
 
-        entrance.elements.forEach(function(item, index){
+        for (var i = 0, len = entrance.elements.length; i < len; i++) {
+
+          var item = entrance.elements[i];
 
           if ( entrance.isElemInView(item) ){
 
@@ -95,7 +97,7 @@
 
           }
 
-        });
+        }
         
       }
 
@@ -105,7 +107,9 @@
         entrance.elements = document.querySelectorAll('[data-entrance]');
 
         // Set up the initial styles on each element, and check if they schould be visible
-        entrance.elements.forEach(function(item, index){
+        for (var i = 0, len = entrance.elements.length; i < len; i++) {
+
+          var item = entrance.elements[i];
 
           entrance.setInitialStyles( item );
 
@@ -114,11 +118,11 @@
             // If the elements are in view when loaded, animate in after a slight delay
             setTimeout(function(){
               entrance.enter( item );
-            }, 200);
+            }, 100);
             
           }
 
-        });
+        }
 
       }
 
