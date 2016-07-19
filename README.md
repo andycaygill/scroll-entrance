@@ -17,7 +17,7 @@ Scroll Entrance is a lightweight JavaScript plugin to animate elements as the ar
 ```html
 <script src="PATH-TO-SCRIPT/scroll-entrance.js"></script>
 ```
-#### 2. Add required CSS in the ```<head>``` of your page
+#### 3. Add required CSS in the ```<head>``` of your page
 This is required to make sure the elements are hidden while the JavaScript is loading
 ```html
 <style>
@@ -35,7 +35,7 @@ Note: It is recommended you use detect for JavaScript using Modernizr and add th
 </style>
 ```
 
-#### 3. Add the 'data-entrance=' attribute to the elements you want to animate
+#### 4. Add the 'data-entrance=' attribute to the elements you want to animate
 
 Example:
 ```html
