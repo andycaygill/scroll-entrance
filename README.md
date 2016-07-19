@@ -79,3 +79,7 @@ Add the 'data-entrance-delay' attribute to delay a transition, for example:
     opacity: 1;
 }
 ```
+
+## Compatibility
+Tested in Chrome, Firefox, IE10+, Safari, ios and Andriod
+

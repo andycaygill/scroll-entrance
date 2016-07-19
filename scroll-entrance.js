@@ -31,8 +31,8 @@
         document.body.style.overflowX = "hidden";
 
 
-        let anim = elem.getAttribute("data-entrance");
-        let delay = elem.getAttribute("data-entrance-delay");
+        var anim = elem.getAttribute("data-entrance");
+        var delay = elem.getAttribute("data-entrance-delay");
 
         elem.style.transition = "all " + (entrance.duration / 1000) + "s ease";
 
@@ -83,11 +83,11 @@
 
       entrance.viewportChange = function(){
 
-        entrance.elements.forEach(function(item, index){
+        Array.prototype.map.call(entrance.elements, function(item) {
 
           if ( entrance.isElemInView(item) ){
 
-            let hasEntered = item.classList.contains("has-entered");
+            var hasEntered = item.classList.contains("has-entered");
 
             if (!hasEntered){
               entrance.enter(item);
@@ -100,21 +100,21 @@
       }
 
       entrance.init = function(){
-
+        
         //Store the elements to be animated
         entrance.elements = document.querySelectorAll('[data-entrance]');
 
         // Set up the initial styles on each element, and check if they schould be visible
-        entrance.elements.forEach(function(item, index){
+        Array.prototype.map.call(entrance.elements, function(item) {
 
           entrance.setInitialStyles( item );
 
           if (entrance.isElemInView(item) ){
 
-            // If the elements are in view when loaded, animate in after a slight delay
-            setTimeout(function(){
+            // If the elements are in view when loaded, animate in after load
+            addEventListener('load', function(){
               entrance.enter( item );
-            }, 200);
+            }, false );
             
           }
 
