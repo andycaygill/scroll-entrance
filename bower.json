@@ -1,0 +1,25 @@
+{
+  "name": "scroll-entrance",
+  "main": "dist/scroll-entrance.js",
+  "homepage": "https://andycaygill.github.io/scroll-entrance/",
+  "authors": [
+    "andycaygill <andy8730@googlemail.com>"
+  ],
+  "description": "A simple, lightweight JavaScript plugin for subtle scrolling animations",
+  "keywords": [
+    "scroll",
+    "animation",
+    "transitions",
+    "css",
+    "JavaScript",
+    "plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

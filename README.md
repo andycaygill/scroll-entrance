@@ -61,25 +61,25 @@ Add the 'data-entrance-delay' attribute to delay a transition, for example:
 #### Defining custom animations
 
 1. Set the 'data-entrance' attribute to the name of your animation
-```html
-<div class="panel" data-entrance="my-custom-animation">
-      <p>This will animate the element in using a custom animation, defined in your css file</p>
-</div>
-```
+	```html
+	<div class="panel" data-entrance="my-custom-animation">
+	      <p>This will animate the element in using a custom animation, defined in your css file</p>
+	</div>
+	```
 
 2. Define the behaviour of your custom animation in your css file
-```css
-/*This is the initial state before animating */
-[data-entrance="my-custom-animation"]{
-	transform: rotate(180deg);
-    opacity: 0;
-}
-/*This is the state after animating */
-[data-entrance="my-custom-animation"].has-animated{
-	transform: rotate(0deg);
-    opacity: 1;
-}
-```
+	```css
+	/*This is the initial state before animating */
+	[data-entrance="my-custom-animation"]{
+		transform: rotate(180deg);
+	    opacity: 0;
+	}
+	/*This is the state after animating */
+	[data-entrance="my-custom-animation"].has-animated{
+		transform: rotate(0deg);
+	    opacity: 1;
+	}
+	```
 
 ## Compatibility
 Tested in Chrome, Firefox, IE10+, Safari, ios and Andriod
