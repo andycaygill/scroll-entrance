@@ -21,8 +21,6 @@ This is required to make sure the elements are hidden while the JavaScript is lo
 </style>
 ```
 
-![]
-
 Note: It is recommended you use detect for JavaScript using Modernizr and add the .js css, this will ensure the elements aren't hidden if JavaScript is disabled. 
 
 ```html
@@ -32,7 +30,7 @@ Note: It is recommended you use detect for JavaScript using Modernizr and add th
 </style>
 ```
 
-#### 3. Add 'data-entrance=' to the elements you want to animate
+#### 3. Add the 'data-entrance=' attribute to the elements you want to animate
 
 Example:
 ```html
