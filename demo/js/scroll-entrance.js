@@ -6,7 +6,8 @@
 
       //Set up defaults
       entrance.duration = "1000";
-      entrance.offset = "200";
+      entrance.distance = "200";
+      entrance.heightOffset = 200;
 
       entrance.isElemInView = function(elem) {
 
@@ -15,11 +16,11 @@
           //Return true if any of the following conditions are met:
           return(
             // The top is in view: the top is more than 0 and less than the window height (the top of the element is in view)
-            ( rect.top >= 0 && rect.top <= window.innerHeight ) || 
+            ( (rect.top + entrance.heightOffset) >= 0 && (rect.top + entrance.heightOffset) <= window.innerHeight ) || 
             // The bottom is in view: bottom position is greater than 0 and greater than the window height
-            ( rect.bottom >= 0 && rect.bottom <= window.innerHeight ) ||
+            ( (rect.bottom + entrance.heightOffset) >= 0 && (rect.bottom + entrance.heightOffset) <= window.innerHeight ) ||
             // The top is above the viewport and the bottom is below the viewport
-            ( rect.top < 0 && rect.bottom > window.innerHeight )
+            ( (rect.top + entrance.heightOffset) < 0 && (rect.bottom + entrance.heightOffset) > window.innerHeight )
           )
 
       }
@@ -48,22 +49,22 @@
 
         if (anim == "from-left") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(-" + entrance.offset + "px, 0)";
+          elem.style.transform = "translate(-" + entrance.distance + "px, 0)";
         }
 
         if (anim == "from-right") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(" + entrance.offset + "px, 0)";
+          elem.style.transform = "translate(" + entrance.distance + "px, 0)";
         }
 
         if (anim == "from-top") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(0, -" + entrance.offset + "px)";
+          elem.style.transform = "translate(0, -" + entrance.distance + "px)";
         }
 
         if (anim == "from-bottom") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(0, " + entrance.offset + "px)";
+          elem.style.transform = "translate(0, " + entrance.distance + "px)";
         }     
 
       }
@@ -109,7 +110,12 @@
           entrance.setInitialStyles( item );
 
           if (entrance.isElemInView(item) ){
-            entrance.enter( item )
+
+            // If the elements are in view when loaded, animate in after a slight delay
+            setTimeout(function(){
+              entrance.enter( item );
+            }, 200);
+            
           }
 
         });

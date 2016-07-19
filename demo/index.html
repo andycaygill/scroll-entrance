@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <style type="text/css">
+            /* Ensure elements are hidden before fading in */
+            [data-entrance] { visibility: hidden; }
+        </style>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -26,36 +31,44 @@
 
         <div class="header dark-panel">
             
-            <h1 class="header__title">
-                ScrollEntrance<span>.js</span>
-            </h1>
+            <div data-entrance="from-bottom">
 
-            <p class="header__caption">
-                A simple, lightweight JavaScript plugin for subtle scrolling animations  
-            </p>
+                <h1 class="header__title">
+                    ScrollEntrance<span>.js</span>
+                </h1>
 
-            <a class="btn" href="" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
-            </a>
+                <p class="header__caption">
+                    A simple, lightweight JavaScript plugin for subtle scrolling animations.  
+                </p>
 
-            <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+                <a class="btn" href="https://github.com/andycaygill/scroll-entrance" target="_blank">
+                    <i class="fa fa-github" aria-hidden="true"></i> View on GitHub
+                </a>
+
+            </div>
+
+            <a href="https://github.com/andycaygill/scroll-entrance"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 
         </div>
 
         <div class="about">
 
-            <h1 class="about__title">
-                What does it do?
-            </h1>
+            <div data-entrance="fade">
 
-            <p class="about__caption">
-                ScrollEntrance.js is a simple way to animate elements as they appear in the viewport. 
-            </p>
+                <h1 class="about__title">
+                    What does it do?
+                </h1>
 
-            <p class="text-uppercase">
-                See Examples <br/>
-                <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </p>
+                <p class="about__caption">
+                    ScrollEntrance.js is a simple way to animate elements as they appear in the viewport. 
+                </p>
+
+                <p class="text-uppercase">
+                    See Examples <br/>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </p>
+
+            </div>
 
         </div>
 
@@ -106,7 +119,7 @@
 
                 <div class="example example--dark">
                     
-                    <div data-entrance="from-right" class="example__wrap">
+                    <div data-entrance="from-right" data-entrance-delay="500" class="example__wrap">
 
                         <h2 class="example__title">
                             Animate From the Right...
@@ -208,7 +221,7 @@
 
             <p class="documentation__caption">View the Documentation on GitHub for more Examples and Getting Started</p>
 
-             <a class="btn" href="" target="_blank">
+             <a class="btn" href="https://github.com/andycaygill/scroll-entrance" target="_blank">
                 <i class="fa fa-github" aria-hidden="true"></i> View Documentation
             </a>
 
