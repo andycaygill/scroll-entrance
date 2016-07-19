@@ -6,8 +6,13 @@ Scroll Entrance is a lightweight JavaScript plugin to animate elements as the ar
 
 ## Basic Usage:
 
+#### 1. Installation
 
-#### 1. Include the script in your HTML file
+- Download: [Download ZIP File](https://github.com/andycaygill/scroll-entrance/archive/master.zip)
+- Bower: `bower install scroll-entrance`
+- NPM: `npm install scroll-entrance`
+
+#### 2. Include the script in your HTML file
 
 ```html
 <script src="PATH-TO-SCRIPT/scroll-entrance.js"></script>
