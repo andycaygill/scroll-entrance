@@ -49,8 +49,8 @@ You can use the following preset transitions to animate elements into view.
 data-entrance="fade"
 data-entrance="from-left"
 data-entrance="from-right"
-data-entrance="fade-top"
-data-entrance="fade-bottom"
+data-entrance="from-top"
+data-entrance="from-bottom"
 ```
 
 ## Advanced Usage:
