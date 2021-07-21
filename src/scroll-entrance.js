@@ -12,15 +12,15 @@
       entrance.isElemInView = function(elem) {
 
           var rect = elem.getBoundingClientRect();
-
+          var heightOffset = elem.getAttribute('data-height-offset') - 0 || entrance.heightOffset;
           //Return true if any of the following conditions are met:
           return(
             // The top is in view: the top is more than 0 and less than the window height (the top of the element is in view)
-            ( (rect.top + entrance.heightOffset) >= 0 && (rect.top + entrance.heightOffset) <= window.innerHeight ) || 
+            ( (rect.top + heightOffset) >= 0 && (rect.top + heightOffset) <= window.innerHeight ) || 
             // The bottom is in view: bottom position is greater than 0 and greater than the window height
-            ( (rect.bottom + entrance.heightOffset) >= 0 && (rect.bottom + entrance.heightOffset) <= window.innerHeight ) ||
+            ( (rect.bottom + heightOffset) >= 0 && (rect.bottom + heightOffset) <= window.innerHeight ) ||
             // The top is above the viewport and the bottom is below the viewport
-            ( (rect.top + entrance.heightOffset) < 0 && (rect.bottom + entrance.heightOffset) > window.innerHeight )
+            ( (rect.top + heightOffset) < 0 && (rect.bottom + heightOffset) > window.innerHeight )
           )
 
       }
@@ -33,8 +33,10 @@
 
         var anim = elem.getAttribute("data-entrance");
         var delay = elem.getAttribute("data-entrance-delay");
+        var distance = elem.getAttribute("data-distance") - 0 || entrance.distance;
+        var duration = elem.getAttribute("data-duration") - 0 || entrance.duration;
 
-        elem.style.transition = "all " + (entrance.duration / 1000) + "s ease";
+        elem.style.transition = "all " + (duration / 1000) + "s ease";
 
         // Add a delay is required
         if (delay) {
@@ -49,22 +51,22 @@
 
         if (anim == "from-left") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(-" + entrance.distance + "px, 0)";
+          elem.style.transform = "translate(-" + distance + "px, 0)";
         }
 
         if (anim == "from-right") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(" + entrance.distance + "px, 0)";
+          elem.style.transform = "translate(" + distance + "px, 0)";
         }
 
         if (anim == "from-top") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(0, -" + entrance.distance + "px)";
+          elem.style.transform = "translate(0, -" + distance + "px)";
         }
 
         if (anim == "from-bottom") {
           elem.style.opacity = "0";
-          elem.style.transform = "translate(0, " + entrance.distance + "px)";
+          elem.style.transform = "translate(0, " + distance + "px)";
         }     
 
       }
